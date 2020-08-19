@@ -21,3 +21,4 @@ after_success:
     -docker push ucoruh/multi-nginx
     -docker push ucoruh/multi-server
     -docker push ucoruh/multi-worker
+
