@@ -10,15 +10,14 @@ script:
     - docker run -e CI=true ucoruh/react-test npm test 
 
 after_success:
-    -docker build -t ucoruh/multi-client ./client
-    -docker build -t ucoruh/multi-nginx ./nginx
-    -docker build -t ucoruh/multi-server ./server
-    -docker build -t ucoruh/multi-worker ./worker
+    - docker build -t ucoruh/multi-client ./client
+    - docker build -t ucoruh/multi-nginx ./nginx
+    - docker build -t ucoruh/multi-server ./server
+    - docker build -t ucoruh/multi-worker ./worker
     # Log in to docker CLI
-    -echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Take those images and push them to docker hub
-    -docker push ucoruh/multi-client
-    -docker push ucoruh/multi-nginx
-    -docker push ucoruh/multi-server
-    -docker push ucoruh/multi-worker
-
+    - docker push ucoruh/multi-client
+    - docker push ucoruh/multi-nginx
+    - docker push ucoruh/multi-server
+    - docker push ucoruh/multi-worker
