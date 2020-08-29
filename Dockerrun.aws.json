@@ -23,6 +23,7 @@
             "essential": false
         },
         {
+            "memory": 256,
             "name": "nginx",
             "image": "ucoruh/multi-nginx",
             "hostname": "nginx",
