@@ -2,32 +2,25 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions":[
         {
-            "MemoryReservation": 256,
-            "cpu": 1,
+            "memory": 256,
             "name": "client",
             "image": "ucoruh/multi-client",
             "hostname": "client",
             "essential": true
         },
         {
-            "MemoryReservation": 256,
-            "cpu": 1,
             "name": "server",
             "image": "ucoruh/multi-server",
             "hostname": "api",
             "essential": false
         },
         {
-            "MemoryReservation": 256,
-            "cpu": 1,
             "name": "worker",
             "image": "ucoruh/multi-worker",
             "hostname": "worker",
             "essential": false
         },
         {
-            "MemoryReservation": 256,
-            "cpu": 1,
             "name": "nginx",
             "image": "ucoruh/multi-nginx",
             "hostname": "nginx",
