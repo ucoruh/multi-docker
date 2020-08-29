@@ -9,6 +9,7 @@
             "essential": true
         },
         {
+            "memory": 256,
             "name": "server",
             "image": "ucoruh/multi-server",
             "hostname": "api",
